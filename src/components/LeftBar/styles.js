@@ -14,9 +14,9 @@ const useStyles = makeStyles(theme=>({
   },
   profText:{
     marginLeft:"0.5rem",
+    backgroundColor: '#fdfdfd',
     width: "max-content",
     borderRadius: "12px",
-    backgroundColor: '#fdfdfd',
     padding: "1rem",
   },
   un:{

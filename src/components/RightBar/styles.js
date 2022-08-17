@@ -3,7 +3,8 @@ import { makeStyles } from "@material-ui/styles";
 const useStyles = makeStyles(theme=>({
   root:{
     backgroundColor: '#424242',
-    width: '25%',
+    minWidth:"20% !important",
+    maxWidth:"20% !important",
     padding: '1.5rem 1rem'
   },
   logo:{

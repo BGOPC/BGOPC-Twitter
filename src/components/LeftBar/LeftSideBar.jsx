@@ -27,7 +27,7 @@ function Contributor({name, id, img}) {
         <ButtonBase>
             <Grid container direction={"row"} style={{marginBottom:"0.5rem"}}>
                 <img src={img} alt="profile" style={{
-                    width: "10%",
+                    width: "20%",
                     borderRadius: "50%",
                     marginRight:"3%",
                 }}/>
@@ -47,7 +47,7 @@ function RightSideBar() {
         <div className={classes.root}>
             <Grid container direction={"row"}>
                 <img src={"images/unknown.png"} alt="profile" style={{
-                    width: "10%",
+                    width: "20%",
                     borderRadius: "50%",
                 }}/>
                 <Grid direction={"column"} container item className={classes.profText}>
