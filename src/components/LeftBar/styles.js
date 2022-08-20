@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme=>({
   },
   contributorsRoot:{
     // backgroundColor:"lightcyan",
-    backgroundColor:"rgba(196,231,255,0.93)",
+    backgroundColor:"rgba(205,237,255,0.96)",
     borderRadius: "15px",
     padding:"1rem",
     margin:"2.5rem 0.5rem",
