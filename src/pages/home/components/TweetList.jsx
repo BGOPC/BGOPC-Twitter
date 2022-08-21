@@ -1,24 +1,50 @@
 import React from 'react';
 import useStyles from "../styles";
-import {Grid, IconButton, Typography} from "@material-ui/core";
+import {Divider, Grid, IconButton, Typography} from "@material-ui/core";
 
-const Tweet = () => {
+var Tweets = [
+    {
+        ProfIMG:"unknown.png",
+        name:"User Name",
+        id:"User ID",
+        msg:"User MSG",
+    },
+    {
+        ProfIMG:"unknown.png",
+        name:"User Name",
+        id:"User ID",
+        msg:"User MSG",
+    },
+    {
+        ProfIMG:"unknown.png",
+        name:"User Name",
+        id:"User ID",
+        msg:"User MSG",
+    },
+    {
+        ProfIMG:"unknown.png",
+        name:"User Name",
+        id:"User ID",
+        msg:"User MSG",
+    },
+]
+
+const Tweet = ({ProfIMG,name,id,msg}) => {
     const classes = useStyles();
     return (
         <div className={classes.Tweet}>
             <Grid container>
-                <img src="images/unknown.png" alt="user" style={{
+                <img src={"images/" + ProfIMG} alt={name+id} style={{
                     width: "8%",
                     borderRadius: "50%",
                 }}/>
                 <div className={classes.TweetUserInfo}>
-                    <Typography className={classes.TweetUsername}>User Name</Typography>
+                    <Typography className={classes.TweetUsername}>{name}</Typography>
 
-                    <Typography className={classes.TweetUserid}>User ID</Typography>
+                    <Typography className={classes.TweetUserid}>{id}</Typography>
                 </div>
                 <textarea  className={classes.TweetMsg}>
-                    Hello, today i was programming and then i got an error, then i fixed it. HaHaHA
-                    Hello, today i was programming and then i got an error, then i fixed it. HaHaHA
+                    {msg}
                 </textarea>
             </Grid>
 
@@ -27,6 +53,9 @@ const Tweet = () => {
                     <i className="fa fa-thumbs-up" aria-hidden="true"></i>
                 </IconButton>
             </Grid>
+            <Divider className={classes.divider} style={{
+                marginTop:"1rem"
+            }}/>
 
         </div>
     );
@@ -34,7 +63,12 @@ const Tweet = () => {
 
 const TweetList = () => {
     return (
-        <div><Tweet/></div>
+        <div>
+            {Tweets.map(tweet => {
+                return <Tweet ProfIMG={tweet.ProfIMG} name={tweet.name} msg={tweet.msg} id={tweet.id}/>
+                }
+            )}
+        </div>
     );
 };
 
